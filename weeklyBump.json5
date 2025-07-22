@@ -1,0 +1,15 @@
+{
+  packageRules: [
+    {
+      matchUpdateTypes: [
+        'minor',
+        'patch',
+        'digest',
+      ],
+      groupName: 'bump-dependencies',
+      schedule: [
+        '* 12 * * 3',
+      ],
+    },
+  ],
+}
