@@ -1,0 +1,51 @@
+{
+  "branchPrefix": "renovate.",
+  "extends": [
+    "config:best-practices",
+    ":rebaseStalePrs",
+    "customManagers:dockerfileVersions"
+  ],
+  "packageRules": [
+    {
+      "matchDatasources": [
+        "repology"
+      ],
+      "versioning": "loose"
+    },
+    {
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "groupName": null,
+      "matchPackageNames": [
+        "*"
+      ],
+      "prConcurrentLimit": 1
+    }
+  ],
+  "customManagers": [
+    {
+      "customType": "regex",
+      "description": "Update *_VERSION ARG and ENV variables in Dockerfiles",
+      "managerFilePatterns": [
+        "/(^|/|\\.)Dockerfile$/"
+      ],
+      "matchStrings": [
+        "([ ]+)?# renovate: datasource=(?<datasource>[a-z-\\.]+?) depName=(?<depName>.+?)(?: packageName=(?<packageName>.+?))?(?: versioning=(?<versioning>[a-z-]+?))? (?:ENV|ARG)? .+?_VERSION=(?<currentValue>.+?)(\\s|$)"
+      ],
+      "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}loose{{/if}}"
+    }
+  ],
+  "labels": [
+    "dependencies"
+  ],
+  "postUpdateOptions": [
+    "composerWithAll",
+    "gomodTidy"
+  ],
+  "osvVulnerabilityAlerts": true,
+  "dependencyDashboardOSVVulnerabilitySummary": "unresolved",
+  "vulnerabilityAlerts": {
+    "enabled": true
+  }
+}
