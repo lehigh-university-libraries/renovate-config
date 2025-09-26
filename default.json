@@ -13,6 +13,18 @@
       "versioning": "loose"
     },
     {
+      "matchDatasources": [
+        "github-tags"
+      ],
+      "matchFileNames": [
+        ".github/workflows/**"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "groupName": "github-actions-major-updates"
+    },
+    {
       "matchUpdateTypes": [
         "major"
       ],
