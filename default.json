@@ -13,15 +13,6 @@
       "versioning": "loose"
     },
     {
-      "matchDatasources": [
-        "docker"
-      ],
-      "matchPackageNames": [
-        "ghcr.io/lehigh-university-libraries/base"
-      ],
-      "pinDigests": false
-    },
-    {
       "groupName": "apk-packages",
       "matchDatasources": [
         "repology"
