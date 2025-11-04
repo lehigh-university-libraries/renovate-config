@@ -20,7 +20,7 @@
         "ghcr.io/lehigh-university-libraries/base"
       ],
       "pinDigests": false
-    }
+    },
     {
       "groupName": "apk-packages",
       "matchDatasources": [
