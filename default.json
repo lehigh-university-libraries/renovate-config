@@ -26,18 +26,6 @@
       "automergeType": "pr"
     },
     {
-      "matchDatasources": [
-        "github-tags"
-      ],
-      "matchFileNames": [
-        ".github/workflows/**"
-      ],
-      "matchUpdateTypes": [
-        "major"
-      ],
-      "groupName": "github-actions-major-updates"
-    },
-    {
       "matchUpdateTypes": [
         "major"
       ],
@@ -47,6 +35,13 @@
       ],
       "prConcurrentLimit": 1
     }
+    {
+      "matchDepTypes": [
+        "action"
+      ],
+      "groupName": "github-actions",
+      "commitMessagePrefix": "[skip-release] "
+    },
   ],
   "customManagers": [
     {
