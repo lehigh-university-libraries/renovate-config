@@ -39,6 +39,9 @@
       "matchDepTypes": [
         "action"
       ],
+      "matchFileNames": [
+        ".github/workflows/**"
+      ],
       "groupName": "github-actions",
       "commitMessagePrefix": "[skip-release] "
     },
