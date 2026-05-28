@@ -5,6 +5,9 @@
     ":rebaseStalePrs",
     "customManagers:dockerfileVersions"
   ],
+  "lockFileMaintenance": {
+    "enabled": false,
+  },
   "packageRules": [
     {
       "matchDatasources": [
